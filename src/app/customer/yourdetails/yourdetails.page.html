@@ -1,0 +1,69 @@
+ <br/>
+  <ion-label text-center>Lets start with Basic Details!!</ion-label>
+  <br/>
+  <ion-app>
+  <ion-content>
+<form (submit)="onDetails(postDetails)" #postDetails="ngForm">
+      <ion-card padding="20" offset="2">
+          <p text-center><b>Please enter these details</b></p>
+          <br/><br/>   
+    <ion-grid>
+      <ion-row>
+         <ion-col>
+                <ion-item>
+                        <ion-thumbnail slot="start">
+                              <ion-icon name="contact"></ion-icon>
+                          </ion-thumbnail>
+                            <ion-label position="floating">Name</ion-label> 
+                          <ion-input type="text" ngModel name="name" required name> </ion-input>   
+                </ion-item>
+                <ion-item>
+                      <ion-thumbnail slot="start">
+                          <ion-icon name="call"></ion-icon>
+                      </ion-thumbnail>
+                      <ion-label position="floating">Contact No</ion-label>
+                      <ion-input type="number" ngModel name = "phoneno" 
+                      required minlength="8" maxlength="10"></ion-input>
+                </ion-item> 
+                <ion-item>
+                      <ion-thumbnail slot="start">
+                        <ion-icon name="mail"></ion-icon>
+                      </ion-thumbnail>
+                      <ion-label position="floating">EmailID</ion-label>
+                      <ion-input type="email" ngModel
+                      name ="emailId" 
+                      required email></ion-input>
+                </ion-item> 
+      </ion-col>
+  </ion-row>
+ </ion-grid>
+    <br/>
+  <br/>
+  <ion-grid>
+    <ion-row>
+      <ion-col offset="10">
+       <div style="display: inline;"> 
+           <div style="float: left;">        
+             <ion-button type="submit" color="danger" fill="solid" slot="start">submit</ion-button>
+            </div>
+           <div style="float: right;">
+             <ion-button color="primary" fill="solid"  slot="end" routerLink="/customer/tabs/rating">Next</ion-button>
+           </div>
+        </div>
+      </ion-col>
+    </ion-row>
+    </ion-grid>
+  </ion-card>
+  
+            
+            <br/>
+            <p></p>
+            <br/>
+            <br/>
+         <ion-item>
+               <ion-label>Subscribe For News</ion-label>
+               <ion-checkbox color="primary" checked slot="start"></ion-checkbox>
+         </ion-item>
+</form>  
+</ion-content>
+</ion-app>

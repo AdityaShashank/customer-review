@@ -1,0 +1,37 @@
+    <ion-content>
+      <ion-grid>
+        <ion-row>
+          <ion-col text-align="center" offset="4">
+      <b><p>   Please rate us !!</p></b>
+      </ion-col>
+      </ion-row>
+      </ion-grid>
+      <ion-card>   
+        <ion-grid>
+            <ion-row>
+            <ion-col> 
+
+
+
+
+              
+        <ion-list>
+            <ion-item *ngFor="let entry of form">
+              <ion-label>{{entry.val}}</ion-label>
+              <ion-checkbox slot="end" [(ngModel)]="entry.isChecked"></ion-checkbox>
+            </ion-item>
+          </ion-list>
+            </ion-col>
+            </ion-row>
+            <ion-row>
+              <br/>
+            <ion-col offset="5">
+                <ion-buttons>
+                    <ion-button color="primary" fill="solid"  slot="end" routerLink="/customer/tabs/reviews">Next</ion-button>
+                   </ion-buttons>
+                  </ion-col>
+                  </ion-row>
+        </ion-grid>
+        </ion-card>
+        </ion-content>
+       
