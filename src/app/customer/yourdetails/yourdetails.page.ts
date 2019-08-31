@@ -1,6 +1,10 @@
 import { Component, OnInit, Optional } from '@angular/core';
 import { NavController } from '@ionic/angular';
 import { Details } from './yourdetails.model'
+import { Store,select } from '@ngrx/store'
+import {Observable} from 'rxjs'
+import {addBasicInfo} from '../../customer.actions'
+
 @Component({
   selector: 'app-yourdetails',
   templateUrl: './yourdetails.page.html',
@@ -8,15 +12,15 @@ import { Details } from './yourdetails.model'
 })
 export class YourdetailsPage {
   // TODO: Change this to redux store.
-  public details: Details;
+  details:Observable<Details>;
 
-  constructor(private navCtrl: NavController) {
-    this.details = new Details();
+  constructor(private navCtrl: NavController,private store:Store<Details>) {
+    this.details = store.pipe(select('customer'))
   }
   onDetails(form) {
     // TODO: Change this to redux reducer actions call   
-    this.details.setBasicInfo(form.value.name, form.value.phoneNo, form.value.emailId);
-    console.log(this.details)
+    console.log(form.value)
+    this.store.dispatch(addBasicInfo(form.value))
   }
   onClick() {
     this.navCtrl.navigateForward('/customer/yourdetails');

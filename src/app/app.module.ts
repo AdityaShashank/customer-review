@@ -16,11 +16,23 @@ import { ReviewsPage } from './customer/reviews/reviews.page';
 import { RatingPage } from './customer/rating/rating.page';
 import { FormsModule } from '@angular/forms';
 
+import { StoreModule } from '@ngrx/store'
+import { customerReducer } from './customer.reducer'
+import {StoreDevtoolsModule} from'@ngrx/store-devtools'
+import { environment } from 'src/environments/environment';
+
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
   // tslint:disable-next-line: deprecation
-  imports: [BrowserModule, HttpModule, IonicModule.forRoot(), AppRoutingModule, FormsModule],
+  imports: [BrowserModule, 
+    HttpModule, 
+    IonicModule.forRoot(), 
+    AppRoutingModule, 
+    FormsModule,
+    StoreModule.forRoot({customer:customerReducer}),
+    StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production })
+  ],
   providers: [
     StatusBar,
     SplashScreen,
@@ -28,4 +40,4 @@ import { FormsModule } from '@angular/forms';
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }

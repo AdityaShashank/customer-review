@@ -22,7 +22,8 @@
                    <ion-icon name="call"></ion-icon>
                  </ion-thumbnail>
                  <ion-label position="floating">Contact No</ion-label>
-                 <ion-input type="number" [(ngModel)]="details.phoneNo" ngControl="phoneNo" name="phoneNo" minlength="1" maxlength="10"></ion-input>
+                 <ion-input type="number" [(ngModel)]="details.phoneNo" ngControl="phoneNo" name="phoneNo" minlength="1"
+                   maxlength="10"></ion-input>
                </ion-item>
                <ion-item>
                  <ion-thumbnail slot="start">
@@ -38,15 +39,11 @@
          <br />
          <ion-grid>
            <ion-row>
-             <ion-col offset="10">
+             <ion-col offset="5">
                <div style="display: inline;">
-                 <div style="float: left;">
-                   <ion-button type="submit" ngSubmit color="danger" fill="solid" slot="start">submit</ion-button>
-                 </div>
-                 <div style="float: right;">
-                   <ion-button color="primary" fill="solid" slot="end" routerLink="/customer/tabs/rating">Next
-                   </ion-button>
-                 </div>
+                 <ion-button type="submit" color="primary" fill="solid" slot="end" routerLink="/customer/tabs/rating">
+                   Next
+                 </ion-button>
                </div>
              </ion-col>
            </ion-row>
