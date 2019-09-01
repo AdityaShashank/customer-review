@@ -4,15 +4,12 @@ import { addBasicInfo } from './customer.actions'
 export const initialState = {
     name: "",
     phoneNo: 0,
-    emailId: "",
-    rating: "",
+    email: "",
+    rating: "happy",
     feedback: ""
 }
 
-const _customerReducer = createReducer(initialState, on(addBasicInfo, state => Object.assign({ name: "updated" }, state)))
-
 export const customerReducer = (state: any = initialState, action) => {
-    console.log(action)
     let temp = Object.assign({}, action)
     delete temp['type']
     switch (action.type) {
@@ -20,6 +17,16 @@ export const customerReducer = (state: any = initialState, action) => {
             return Object.assign(state, temp);
         case 'ADD_RATING':
             return Object.assign(state, temp);
+        case 'ADD_FEEDBACK':
+            return Object.assign(state, temp);
+        case 'RESET':
+            return {
+                name: "",
+                phoneNo: 0,
+                email: "",
+                rating: "happy",
+                feedback: ""
+            };
         default:
             return state
     }

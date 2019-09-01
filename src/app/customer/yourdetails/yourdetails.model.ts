@@ -1,10 +1,10 @@
 export class Details {
     name?: 'string';
     phoneNo?: 'string';
-    emailId?: 'string';
-    setBasicInfo(name, phoneNo, emailId) {
+    email?: 'string';
+    setBasicInfo(name, phoneNo, email) {
         this.name = name;
         this.phoneNo = phoneNo;
-        this.emailId = emailId;
+        this.email = email;
     }
 }

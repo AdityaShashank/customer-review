@@ -2,36 +2,38 @@
       <ion-grid>
         <ion-row>
           <ion-col text-align="center" offset="4">
-      <b><p>   Please rate us !!</p></b>
-      </ion-col>
-      </ion-row>
+            <b>
+              <p> Please rate us !!</p>
+            </b>
+          </ion-col>
+        </ion-row>
       </ion-grid>
-      <ion-card>   
-        <ion-grid>
+      <ion-card>
+        <form (ngSubmit)="onRating(form)" #form="ngForm">
+          <ion-grid>
             <ion-row>
-            <ion-col> 
-
-
-
-
-              
-        <ion-list>
-            <ion-item *ngFor="let entry of form">
-              <ion-label>{{entry.val}}</ion-label>
-              <ion-checkbox slot="end" [(ngModel)]="entry.isChecked"></ion-checkbox>
-            </ion-item>
-          </ion-list>
-            </ion-col>
+              <ion-col>
+                <ion-radio-group>
+                  <ion-list>
+                    <ion-item *ngFor="let item of ratings" (ionSelect)="radioSelect($event)">
+                      <ion-label>{{item.text}}</ion-label>
+                      <ion-radio slot="end" [value]="item.value" [name]="item.name" [checked]="item.checked"></ion-radio>
+                    </ion-item>
+                  </ion-list>
+                </ion-radio-group>
+              </ion-col>
             </ion-row>
             <ion-row>
-              <br/>
-            <ion-col offset="5">
+              <br />
+              <ion-col offset="5">
                 <ion-buttons>
-                    <ion-button color="primary" fill="solid"  slot="end" routerLink="/customer/tabs/reviews">Next</ion-button>
-                   </ion-buttons>
-                  </ion-col>
-                  </ion-row>
-        </ion-grid>
-        </ion-card>
-        </ion-content>
-       
+                  <ion-button type="submit" color="primary" fill="solid" slot="end" routerLink="/customer/tabs/reviews">
+                    Next
+                  </ion-button>
+                </ion-buttons>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </form>
+      </ion-card>
+    </ion-content>

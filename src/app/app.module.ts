@@ -15,7 +15,7 @@ import { YourdetailsPage } from './customer/yourdetails/yourdetails.page';
 import { ReviewsPage } from './customer/reviews/reviews.page';
 import { RatingPage } from './customer/rating/rating.page';
 import { FormsModule } from '@angular/forms';
-
+import { HttpClientModule } from '@angular/common/http';
 import { StoreModule } from '@ngrx/store'
 import { customerReducer } from './customer.reducer'
 import {StoreDevtoolsModule} from'@ngrx/store-devtools'
@@ -27,6 +27,7 @@ import { environment } from 'src/environments/environment';
   // tslint:disable-next-line: deprecation
   imports: [BrowserModule, 
     HttpModule, 
+    HttpClientModule,
     IonicModule.forRoot(), 
     AppRoutingModule, 
     FormsModule,
