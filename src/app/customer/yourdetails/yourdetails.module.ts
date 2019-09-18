@@ -4,7 +4,7 @@ import { FormsModule, FormBuilder, FormGroup, FormControl } from '@angular/forms
 import { Routes, RouterModule } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
 import { YourdetailsPage } from './yourdetails.page';
-import { Details } from './yourdetails.model'
+import { Details } from './yourdetails.model';
 const routes: Routes = [
   {
     path: '',

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Store,select } from '@ngrx/store'
-import {Observable} from 'rxjs'
-import {addRating} from '../../customer.actions'
+import { Store,select } from '@ngrx/store';
+import {Observable} from 'rxjs';
+import {addRating} from '../../customer.actions';
 
 @Component({
   selector: 'app-rating',
@@ -36,19 +36,19 @@ export class RatingPage implements OnInit {
   selectedRating : Observable<string>;
 
   constructor(private store:Store<{rating:string}>) {
-    this.selectedRating = store.pipe(select('customer'))
+    this.selectedRating = store.pipe(select('customer'));
    }
 
   ngOnInit() {
   }
 
   onRating(form){
-    console.log(form.value)
+    console.log(form.value);
   }
 
   radioSelect(event) {
     console.log("radioSelect",event.detail);
     // this.selectedRating = event.detail.value;
-    this.store.dispatch(addRating({rating:event.detail.value}))
+    this.store.dispatch(addRating({rating:event.detail.value}));
   }
 }

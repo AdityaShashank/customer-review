@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Store,select } from '@ngrx/store'
+import { Store,select } from '@ngrx/store';
 import { reset } from 'src/app/customer.actions';
 
 @Component({

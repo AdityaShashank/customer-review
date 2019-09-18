@@ -1,9 +1,9 @@
 import { Component, OnInit, Optional } from '@angular/core';
 import { NavController } from '@ionic/angular';
-import { Details } from './yourdetails.model'
-import { Store,select } from '@ngrx/store'
-import {Observable} from 'rxjs'
-import {addBasicInfo} from '../../customer.actions'
+import { Details } from './yourdetails.model';
+import { Store,select } from '@ngrx/store';
+import {Observable} from 'rxjs';
+import {addBasicInfo} from '../../customer.actions';
 
 @Component({
   selector: 'app-yourdetails',
@@ -15,12 +15,12 @@ export class YourdetailsPage {
   details:Observable<Details>;
 
   constructor(private navCtrl: NavController,private store:Store<Details>) {
-    this.details = store.pipe(select('customer'))
+    this.details = store.pipe(select('customer'));
   }
   onDetails(form) {
     // TODO: Change this to redux reducer actions call   
-    console.log(form.value)
-    this.store.dispatch(addBasicInfo(form.value))
+    console.log(form.value);
+    this.store.dispatch(addBasicInfo(form.value));
   }
   onClick() {
     this.navCtrl.navigateForward('/customer/yourdetails');
