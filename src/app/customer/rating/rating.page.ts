@@ -41,7 +41,7 @@ export class RatingPage implements OnInit {
     {
       id: '5',
       name: 'selectedRating',
-      value: 'extremelyhappy',
+      value: 'Extremelyhappy',
       text: 'Extremely Happy',
       checked: true,
     },
