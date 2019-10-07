@@ -1,12 +1,10 @@
- <br />
- <ion-label text-center>Lets start with Basic Details!!</ion-label>
- <br />
- <ion-app>
-   <ion-content>
-     <form (ngSubmit)="onDetails(form)" #form="ngForm">
-       <ion-card padding="20" offset="2">
+
+<form (ngSubmit)="onDetails(form)" #form="ngForm">
+        
          <p text-center><b>Please enter these details</b></p>
-         <br /><br />
+         <ion-card padding="20" offset="2">      
+  <br />
+ 
          <ion-grid>
            <ion-row>
              <ion-col>
@@ -70,7 +68,7 @@
              </ion-col>
            </ion-row>
          </ion-grid>
-       </ion-card>
+        </ion-card>
 
 
        <br />
@@ -82,5 +80,9 @@
          <ion-checkbox color="primary" checked slot="start"></ion-checkbox>
        </ion-item> -->
      </form>
-   </ion-content>
- </ion-app>
+ 
+    <div class="footer">
+	        <div class="container text-center">
+	            <p position="te"> Made with ♥️ by <a href="#">Aditya Shashank</a>.
+	        </div>
+	    </div>

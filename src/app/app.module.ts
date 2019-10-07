@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouteReuseStrategy } from '@angular/router';
-import { NgModel } from '@angular/forms';
+import { NgModel, ReactiveFormsModule } from '@angular/forms';
 
 import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
@@ -31,6 +31,7 @@ import { environment } from 'src/environments/environment';
     IonicModule.forRoot(), 
     AppRoutingModule, 
     FormsModule,
+    ReactiveFormsModule,
     StoreModule.forRoot({customer:customerReducer}),
     StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production })
   ],

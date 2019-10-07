@@ -1,26 +1,41 @@
+<ion-content >
 
-<ion-content bgcolor="blue">
 <br/>
-  <ion-label text-center>           Write a Review !!</ion-label>
+  <ion-label>
+    <h1><p text-center> Write a Review !!</p></h1>
   <br/> 
- <ion-label text-center> This will help us to know you better</ion-label>
+ <h2><p text-center> This will help us to know you better</p></h2>
+ </ion-label>
  <br/>
+
 <ion-content>   
   <ion-tabs >
-      <ion-tab-bar slot='top' position="text-center" color="primary">
-    
-          <ion-tab-button tab="yourdetails"  value='solid'>
-              <ion-label  expand="block" value="solid">YourDetails</ion-label>
+      <ion-tab-bar slot='top' position="text-center" color="light">
+            
+          <div class="zoom">
+          
+          <ion-tab-button tab="yourdetails"  value='solid' color="medium">
+              <ion-label  expand="block" value="solid" >YourDetails</ion-label>
         </ion-tab-button>
-     <ion-tab-button tab="rating" color="primary" value="solid">
+          </div>
+          <div class="zoom">
+     <ion-tab-button tab="rating" color="light" value="solid">
       <ion-label>Rating</ion-label>
      </ion-tab-button>
-    
-    <ion-tab-button tab="reviews" color="primary" value="solid">
+    </div>
+    <div class="zoom">
+    <ion-tab-button tab="reviews" color="light" value="solid">
         <ion-label>Review</ion-label>
     </ion-tab-button>
+    </div>
     </ion-tab-bar>
   </ion-tabs>
+  <div style="margin: 24px 0;">
+      <a href="#"><i class="fa fa-dribbble"></i></a> 
+      <a href="#"><i class="fa fa-twitter"></i></a>  
+      <a href="#"><i class="fa fa-linkedin"></i></a>  
+      <a href="#"><i class="fa fa-facebook"></i></a> 
+    </div>
 </ion-content>
 
 

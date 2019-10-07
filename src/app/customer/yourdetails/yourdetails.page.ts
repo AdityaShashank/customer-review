@@ -13,6 +13,7 @@ import {addBasicInfo} from '../../customer.actions';
 export class YourdetailsPage {
   // TODO: Change this to redux store.
   details:Observable<Details>;
+  isCollapsed: boolean = true;
 
   constructor(private navCtrl: NavController,private store:Store<Details>) {
     this.details = store.pipe(select('customer'));

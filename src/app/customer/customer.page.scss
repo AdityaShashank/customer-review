@@ -1,6 +1,32 @@
  // page.scss
 ion-content{
   background-color: red;
+  color: black;
+  font-size:"10";
   }
-  
-  
+p{
+  color: black;
+  size: 30px;
+
+}
+* {
+  box-sizing: border-box;
+}
+
+.zoom {
+  padding: 50px;
+  transition: transform 0s;
+  width: 300px;
+  height: 200px;
+  margin: 20;
+  color:white;
+  font-size:"6";
+}
+
+.zoom:hover {
+  -ms-transform: scale(1.5); /* IE 9 */
+  -webkit-transform: scale(1.5); /* Safari 3-8 */
+  transform: scale(1.0); 
+  background-color:#1C1D1D ;
+  font-size:"15";
+}
