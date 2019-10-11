@@ -26,7 +26,8 @@ const routes: Routes = [
         path: '',
         redirectTo: '/customer/tabs',
         pathMatch: 'full',
-    },  { path: 'thanks', loadChildren: './thanks/thanks.module#ThanksPageModule' }
+    },
+  { path: 'thanks', loadChildren: './thanks/thanks.module#ThanksPageModule' }
 
 ];
 

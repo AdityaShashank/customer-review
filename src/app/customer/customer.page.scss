@@ -4,9 +4,14 @@ ion-content{
   color: black;
   font-size:"10";
   }
+ion-label{
+  color:white;
+  padding: 8px;
+  font-size:"10";
+}
 p{
   color: black;
-  size: 30px;
+  font-size: "50";
 
 }
 * {
@@ -14,19 +19,18 @@ p{
 }
 
 .zoom {
-  padding: 50px;
+  padding: 25px;
   transition: transform 0s;
-  width: 300px;
+  width: 250px;
   height: 200px;
-  margin: 20;
+  margin: 10;
   color:white;
-  font-size:"6";
 }
 
 .zoom:hover {
   -ms-transform: scale(1.5); /* IE 9 */
-  -webkit-transform: scale(1.5); /* Safari 3-8 */
-  transform: scale(1.0); 
+  -webkit-transform: scale(10.5); /* Safari 3-8 */
+  transform: scale(1.25); 
   background-color:#1C1D1D ;
   font-size:"15";
 }
